@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/index',
   output: {
     path: path.resolve(__dirname, '..', 'dist'),
-    filename: isDev ? 'js/[name].js' : 'js/[name].[hash].js',
+    filename: isDev ? 'js/[name].js' : 'js/[name].[contenthash].js',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],

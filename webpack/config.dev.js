@@ -5,13 +5,15 @@ const baseConfig = require('./config');
 
 const config = {
   mode: 'development',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'inline-source-map',
   entry: ['react-hot-loader/patch', './src/index.js'],
   optimization: {
     splitChunks: false,
     noEmitOnErrors: true,
   },
-  cache: true,
+  cache: {
+    type: 'memory',
+  },
   devServer: {
     hot: true,
     compress: true,
