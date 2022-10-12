@@ -18,5 +18,5 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v3
-      - uses: warchant/setup-sonar-scanner@v3
+      - uses: warchant/setup-sonar-scanner@v4
       - run: sonar-scanner -Dsonar.host.url=${{ secrets.SONAR_QUBE_URL }} -Dsonar.login=${{ secrets.SONAR_QUBE_TOKEN }}
