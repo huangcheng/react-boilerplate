@@ -15,13 +15,6 @@ module.exports = {
   module: {
     rules: [
       {
-        exclude: /node_modules/,
-        test: /\.tsx?$/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
         generator: {
           filename: 'static/images/[name].[hash][ext]',
         },
