@@ -11,20 +11,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(css|scss)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              url: {
-                filter: (url) => {
-                  return !/bg\.svg/.test(url);
-                },
-              },
-            },
-          },
-        ],
+        exclude: /node_modules/,
+        test: /\.tsx?$/,
+        use: {
+          loader: 'swc-loader',
+        },
       },
     ],
   },

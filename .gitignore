@@ -328,4 +328,4 @@ package-lock.json
 cypress/videos
 cypress/screenshots
 
-.idea/sonarlint/
+.idea/

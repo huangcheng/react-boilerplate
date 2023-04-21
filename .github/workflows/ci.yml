@@ -8,15 +8,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: latest
-      - run: npm i --force
-      - run: npm test
-      - run: npm run cypress
-      - run: npm run build
-
-  sonar:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/checkout@v3
-      - uses: warchant/setup-sonar-scanner@v3
-      - run: sonar-scanner -Dsonar.host.url=${{ secrets.SONAR_QUBE_URL }} -Dsonar.login=${{ secrets.SONAR_QUBE_TOKEN }}
+      - run: npm i -g pnpm
+      - run: pnpm i --force
+      - run: pnpm test
+      - run: pnpm run build

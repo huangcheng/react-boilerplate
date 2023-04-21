@@ -22,22 +22,6 @@ module.exports = {
         },
       },
       {
-        test: /\.(css|scss)$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              url: {
-                filter: (url) => {
-                  return !/bg\.svg/.test(url);
-                },
-              },
-            },
-          },
-        ],
-      },
-      {
         generator: {
           filename: 'static/images/[name].[hash][ext]',
         },
