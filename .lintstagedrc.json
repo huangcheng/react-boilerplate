@@ -1,5 +1,5 @@
 {
   "*.{ts,tsx,ejs}": ["npm run check-spell"],
-  "*.{ts,tsx}": ["npm test", "npm run eslint", "npm run pretty-quick"],
+  "*.{ts,tsx}": ["npm test", "npm run playwright", "npm run eslint", "npm run prettier"],
   "*.css": ["npm run stylelint"]
 }

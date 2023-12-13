@@ -2,7 +2,6 @@
 module.exports = {
   env: {
     browser: true,
-    'cypress/globals': true,
     es2021: true,
     jest: true,
     node: true,
@@ -41,6 +40,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': ['error'],
         'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
         'react/jsx-uses-react': 'off',
+        'react/no-unknown-property': ['error', { ignore: ['css'] }],
         'react/react-in-jsx-scope': 'off',
         'tsdoc/syntax': 'error',
         'unicorn/no-useless-undefined': 'off',
@@ -71,7 +71,7 @@ module.exports = {
     },
   ],
   parser: '@babel/eslint-parser',
-  plugins: ['html', 'import', 'eslint-plugin-tsdoc', 'cypress'],
+  plugins: ['html', 'import', 'eslint-plugin-tsdoc'],
   rules: {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'no-console': 'error',
